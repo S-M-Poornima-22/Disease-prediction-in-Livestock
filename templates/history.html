@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; color: #333;}
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .back-btn { display: inline-block; margin-top: 20px; padding: 10px 15px; background: #333; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 900px; margin: 30px auto; padding: 20px; background: rgba(255,255,255,0.95); border-radius: 10px;">
+        <h1 style="color: #2e7d32;">📋 Livestock Diagnosis Logs</h1>
+        <p>Historical registry of all automated machine learning assessments executed by this system.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date & Time (UTC)</th>
+                    <th>Animal Type</th>
+                    <th>Age</th>
+                    <th>Temperature (°F)</th>
+                    <th>Predicted Condition</th>
+                    <th>Confidence Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.date_recorded.strftime('%Y-%m-%d %H:%M') }}</td>
+                    <td>{{ record.animal_type.capitalize() }}</td>
+                    <td>{{ record.age }}</td>
+                    <td>{{ record.temperature }}°F</td>
+                    <td style="font-weight: bold; color: #2e7d32;">{{ record.disease }}</td>
+                    <td>{{ record.confidence }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="6" style="text-align: center;">No records found yet. Try making a prediction!</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <a href="/" class="back-btn">🏠 Home</a>
+    </div>
+</body>
+</html>

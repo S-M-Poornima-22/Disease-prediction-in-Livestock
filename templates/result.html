@@ -27,6 +27,12 @@
                 <a href="/predict" class="btn btn-primary">🔄 New Diagnosis</a>
                 <a href="/" class="btn btn-secondary">🏠 Home</a>
             </div>
+            <h2 class="predicted-condition">{{ disease }}</h2>
+            <p class="confidence-score">Confidence Level: <strong>{{ confidence }}</strong></p>
+            <div class="treatment-box" style="margin-top: 20px; padding: 15px; border-left: 5px solid #007bff; background-color: #f8f9fa; text-align: left;">
+            <h4 style="color: #007bff; margin-top: 0;">📋 Immediate Recommended Actions:</h4>
+            <p>{{ treatment_advice }}</p>
+            </div>
         </div>
     </div>
 </body>

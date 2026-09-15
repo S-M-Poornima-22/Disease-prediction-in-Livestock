@@ -15,7 +15,12 @@
             <form action="/result" method="post">
                 <div class="form-group">
                     <label><span class="icon">🐾</span> Animal Type</label>
-                    <input type="text" name="animal_type" placeholder="e.g. Goat, Cow" required>
+                    <select name="animal_type" required>
+                        <option value="" disabled selected>Select Animal</option>
+                        <option value="goat">Goat</option>
+                        <option value="cow">Cow</option>
+                        <option value="sheep">Sheep</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -30,17 +35,35 @@
 
                 <div class="form-group">
                     <label><span class="icon">🩺</span> Primary Symptom</label>
-                    <input type="text" name="sym1" placeholder="e.g. chills" required>
+                    <select name="sym1" required>
+                        <option value="" disabled selected>Select primary symptom</option>
+                        <option value="chills">Chills</option>
+                        <option value="swellings">Swellings</option>
+                        <option value="blisters">Blisters</option>
+                        <option value="loss of appetite">Loss of appetite</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label><span class="icon">🩺</span> Secondary Symptom (optional)</label>
-                    <input type="text" name="sym2" placeholder="e.g. swelling in extremities">
+                    <select name="sym2">
+                        <option value="" selected>None / Select secondary symptom</option>
+                        <option value="chills">Chills</option>
+                        <option value="swellings">Swellings</option>
+                        <option value="blisters">Blisters</option>
+                        <option value="loss of appetite">Loss of appetite</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label><span class="icon">🩺</span> Additional Symptom (optional)</label>
-                    <input type="text" name="sym3" placeholder="e.g. shortness of breath">
+                    <select name="sym3">
+                        <option value="" selected>None / Select additional symptom</option>
+                        <option value="chills">Chills</option>
+                        <option value="swellings">Swellings</option>
+                        <option value="blisters">Blisters</option>
+                        <option value="loss of appetite">Loss of appetite</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">Predict</button>

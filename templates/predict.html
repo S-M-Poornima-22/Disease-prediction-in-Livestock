@@ -20,6 +20,7 @@
                         <option value="goat">Goat</option>
                         <option value="cow">Cow</option>
                         <option value="sheep">Sheep</option>
+                        <option value="buffalo">buffalo</option>
                     </select>
                 </div>
 
@@ -41,28 +42,31 @@
                         <option value="swellings">Swellings</option>
                         <option value="blisters">Blisters</option>
                         <option value="loss of appetite">Loss of appetite</option>
+                        <option value="shortness of breath">shortness of breath</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label><span class="icon">🩺</span> Secondary Symptom (optional)</label>
-                    <select name="sym2">
-                        <option value="" selected>None / Select secondary symptom</option>
-                        <option value="chills">Chills</option>
-                        <option value="swellings">Swellings</option>
-                        <option value="blisters">Blisters</option>
-                        <option value="loss of appetite">Loss of appetite</option>
+                    <label><span class="icon">🩺</span> Secondary Symptom </label>
+                    <select name="sym2" required>
+                        <option value="" disabled selected>Select secondary symptom</option>
+                        <option value="depression">depression</option>
+                        <option value="fatigue">fatigue</option>
+                        <option value="sweats">sweats</option>
+                        <option value="difficulty walking">difficult in walking</option>
+                        <option value="sores on tongue">sores on tongue</option>
+                        <option value="painless lumps">painless lumps</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label><span class="icon">🩺</span> Additional Symptom (optional)</label>
-                    <select name="sym3">
-                        <option value="" selected>None / Select additional symptom</option>
-                        <option value="chills">Chills</option>
-                        <option value="swellings">Swellings</option>
-                        <option value="blisters">Blisters</option>
-                        <option value="loss of appetite">Loss of appetite</option>
+                    <label><span class="icon">🩺</span> Additional symptom </label>
+                    <select name="sym3" required></select>
+                        <option value="" disabled selected>Additional symptom</option>
+                        <option value="sores on gums">sores on gums</option>
+                        <option value="lameness">lameness</option>
+                        <option value="swelling in abdomen">swelling in abdomen</option>
+                        <option value="crackling sound">crackling sound</option>
                     </select>
                 </div>
 

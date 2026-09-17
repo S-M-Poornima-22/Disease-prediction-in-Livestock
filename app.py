@@ -20,7 +20,7 @@ class DiagnosisHistory(db.Model):
     temperature = db.Column(db.Float, nullable=False)
     disease = db.Column(db.String(100), nullable=False)
     confidence = db.Column(db.String(20), nullable=False)
-    date_recorded = db.Column(db.DateTime, default=datetime.utcnow)
+    date_recorded = db.Column(db.DateTime, default=lambda: datetime.now())
 
 # Create the database file and tables automatically
 with app.app_context():

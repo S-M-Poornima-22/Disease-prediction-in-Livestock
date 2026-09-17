@@ -6,77 +6,79 @@
     <title>Predict Disease</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <div class="bg-blur-container">
-        <div class="container">
-            <h1 class="main-title">Animal Disease Diagnosis</h1>
-            <p class="subtitle">Enter details about your livestock</p>
-            
-            <form action="/result" method="post">
-                <div class="form-group">
-                    <label><span class="icon">🐾</span> Animal Type</label>
-                    <select name="animal_type" required>
-                        <option value="" disabled selected>Select Animal</option>
-                        <option value="goat">Goat</option>
-                        <option value="cow">Cow</option>
-                        <option value="sheep">Sheep</option>
-                        <option value="buffalo">buffalo</option>
-                    </select>
-                </div>
+<div class="bg-blur-container">
+    <div class="container">
+        <h1 class="main-title">Animal Disease Diagnosis</h1>
+        <p class="subtitle">Enter details about your livestock</p>
 
-                <div class="form-group">
-                    <label><span class="icon">📅</span> Age</label>
-                    <input type="number" name="age" placeholder="Enter age" required>
-                </div>
+        <form action="/result" method="post">
+            <div class="form-group">
+                <label><span class="icon">🐾</span> Animal Type</label>
+                <select name="animal_type" required>
+                    <option value="" disabled selected>Select Animal</option>
+                    <option value="goat">Goat</option>
+                    <option value="cow">Cow</option>
+                    <option value="sheep">Sheep</option>
+                    <option value="buffalo">buffalo</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label><span class="icon">🌡️</span> Temperature (°F)</label>
-                    <input type="number" step="0.1" name="temperature" placeholder="e.g. 100.3" required>
-                </div>
+            <div class="form-group">
+                <label><span class="icon">📅</span> Age</label>
+                <input type="number" name="age" placeholder="Enter age" required>
+            </div>
 
-                <div class="form-group">
-                    <label><span class="icon">🩺</span> Primary Symptom</label>
-                    <select name="sym1" required>
-                        <option value="" disabled selected>Select primary symptom</option>
-                        <option value="chills">Chills</option>
-                        <option value="swellings">Swellings</option>
-                        <option value="blisters">Blisters</option>
-                        <option value="loss of appetite">Loss of appetite</option>
-                        <option value="painless lumps">painless lumps</option>
-                        <option value="shortness of breath">shortness of breath</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label><span class="icon">🌡️</span> Temperature (°F)</label>
+                <input type="number" step="0.1" name="temperature" placeholder="e.g. 100.3" required>
+            </div>
 
-                <div class="form-group">
-                    <label><span class="icon">🩺</span> Secondary Symptom </label>
-                    <select name="sym2" required>
-                        <option value="" disabled selected>Select secondary symptom</option>
-                        <option value="depression">depression</option>
-                        <option value="fatigue">fatigue</option>
-                        <option value="sweats">sweats</option>
-                        <option value="difficulty walking">difficult in walking</option>
-                        <option value="sores on tongue">sores on tongue</option>
-                        <option value="painless lumps">painless lumps</option>
-                        <option value="chills">chills</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label><span class="icon">🩺</span> Primary Symptom</label>
+                <select name="sym1" required>
+                    <option value="" disabled selected>Select primary symptom</option>
+                    <option value="chills">Chills</option>
+                    <option value="swellings">Swellings</option>
+                    <option value="blisters">Blisters</option>
+                    <option value="loss of appetite">Loss of appetite</option>
+                    <option value="painless lumps">painless lumps</option>
+                    <option value="shortness of breath">shortness of breath</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label><span class="icon">🩺</span> Additional symptom </label>
-                    <select name="sym3" required>
-                        <option value="" disabled selected>Additional symptom</option>
-                        <option value="sores on gums">sores on gums</option>
-                        <option value="lameness">lameness</option>
-                        <option value="swelling ">swelling </option>
-                        <option value="crackling sound">crackling sound</option>
-                        <option value="painless lumps">painless lumps</option>
-                        <option value="loss of appetite">Loss of appetite</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label><span class="icon">🩺</span> Secondary Symptom</label>
+                <select name="sym2" required>
+                    <option value="" disabled selected>Select secondary symptom</option>
+                    <option value="depression">depression</option>
+                    <option value="fatigue">fatigue</option>
+                    <option value="sweats">sweats</option>
+                    <option value="difficulty walking">difficult in walking</option>
+                    <option value="sores on tongue">sores on tongue</option>
+                    <option value="painless lumps">painless lumps</option>
+                    <option value="chills">chills</option>
+                </select>
+            </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Predict</button>
-            </form>
-        </div>
+            <div class="form-group">
+                <label><span class="icon">🩺</span> Additional Symptom</label>
+                <select name="sym3" required>
+                    <option value="" disabled selected>Additional symptom</option>
+                    <option value="sores on gums">sores on gums</option>
+                    <option value="lameness">lameness</option>
+                    <option value="swelling ">swelling </option>
+                    <option value="crackling sound">crackling sound</option>
+                    <option value="painless lumps">painless lumps</option>
+                    <option value="loss of appetite">Loss of appetite</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
     </div>
+</div>
 </body>
 </html>
+

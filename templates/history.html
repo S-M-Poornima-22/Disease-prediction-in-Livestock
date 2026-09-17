@@ -9,14 +9,10 @@
         .history-container { width:92%; max-width:1200px; margin:35px auto; }
         .history-title { text-align:center; color:#388e3c; font-size:38px; margin:0 0 8px; }
         .history-subtitle { text-align:center; color:#666; margin:0 0 28px; }
-        .table-box { background:#fff; border-radius:14px; overflow:hidden;
-            box-shadow:0 5px 20px rgba(0,0,0,.12); overflow-x:auto; }
-        .history-table { width:100%; min-width:900px; border-collapse:collapse;
-            table-layout:fixed; }
-        .history-table th { background:#388e3c; color:#fff; padding:15px 10px;
-            font-size:14px; font-weight:600; text-align:center; }
-        .history-table td { padding:15px 10px; text-align:center; font-size:14px;
-            color:#333; border-bottom:1px solid #eee; }
+        .table-box { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.12); overflow-x:auto; }
+        .history-table { width:100%; min-width:900px; border-collapse:collapse; table-layout:fixed; }
+        .history-table th { background:#388e3c; color:#fff; padding:15px 10px; font-size:14px; font-weight:600; text-align:center; }
+        .history-table td { padding:15px 10px; text-align:center; font-size:14px; color:#333; border-bottom:1px solid #eee; }
         .history-table tr:hover { background:#f4faf4; }
         .history-table th:nth-child(1) { width:14%; }
         .history-table th:nth-child(2) { width:9%; }
@@ -27,14 +23,13 @@
         .disease-name { font-weight:600; color:#388e3c !important; white-space:nowrap; }
         .confidence { font-weight:600; }
         .date-value { white-space:nowrap; }
-        .empty-history { text-align:center; padding:35px; background:#fff;
-            border-radius:14px; color:#666; }
+        .empty-history { text-align:center; padding:35px; background:#fff; border-radius:14px; color:#666; }
         .history-buttons { display:flex; justify-content:center; gap:15px; margin-top:25px; }
-        .history-btn { padding:11px 24px; border-radius:25px; text-decoration:none;
-            color:#fff; font-weight:600; font-size:14px; }
+        .history-btn { padding:11px 24px; border-radius:25px; text-decoration:none; color:#fff; font-weight:600; font-size:14px; }
         .new-prediction-btn { background:#388e3c; }
         .home-btn { background:#5c6bc0; }
         .history-btn:hover { opacity:.9; transform:translateY(-1px); }
+
         @media(max-width:768px) {
             .history-container { width:94%; margin:25px auto; }
             .history-title { font-size:30px; }
@@ -45,36 +40,46 @@
 </head>
 <body>
 <div class="bg-blur-container">
-<div class="history-container">
-<h1 class="history-title">Diagnosis History Logs</h1>
-<p class="history-subtitle">View previously recorded livestock disease predictions</p>
+    <div class="history-container">
+        <h1 class="history-title">Diagnosis History Logs</h1>
+        <p class="history-subtitle">View previously recorded livestock disease predictions</p>
 
-{% if records %}
-<div class="table-box">
-<table class="history-table">
-<thead><tr><th>Animal</th><th>Age</th><th>Temperature</th><th>Predicted Disease</th><th>Confidence</th><th>Date & Time</th></tr></thead>
-<tbody>
-{% for record in records %}
-<tr>
-<td>{{ record.animal_type|title }}</td>
-<td>{{ record.age }}</td>
-<td>{{ record.temperature }} °C</td>
-<td class="disease-name">{{ record.disease|title }}</td>
-<td class="confidence">{{ record.confidence }}</td>
-<td class="date-value">{{ record.date_recorded.strftime('%d-%m-%Y, %I:%M %p') }}</td>
-</tr>
-{% endfor %}
-</tbody></table>
-</div>
-{% else %}
-<div class="empty-history">No diagnosis history available yet.</div>
-{% endif %}
+        {% if records %}
+        <div class="table-box">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Animal</th>
+                        <th>Age</th>
+                        <th>Temperature</th>
+                        <th>Predicted Disease</th>
+                        <th>Confidence</th>
+                        <th>Date & Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td>{{ record.animal_type|title }}</td>
+                        <td>{{ record.age }}</td>
+                        <td>{{ record.temperature }}°F</td>
+                        <td class="disease-name">{{ record.disease|title }}</td>
+                        <td class="confidence">{{ record.confidence }}</td>
+                        <td class="date-value">{{ record.date_recorded.strftime('%d-%m-%Y, %I:%M %p') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-history">No diagnosis history available yet.</div>
+        {% endif %}
 
-<div class="history-buttons">
-<a href="/predict" class="history-btn new-prediction-btn">➕ New Prediction</a>
-<a href="/" class="history-btn home-btn">🏠 Home</a>
-</div>
-</div>
+        <div class="history-buttons">
+            <a href="/predict" class="history-btn new-prediction-btn">➕ New Prediction</a>
+            <a href="/" class="history-btn home-btn">🏠 Home</a>
+        </div>
+    </div>
 </div>
 </body>
 </html>

@@ -38,7 +38,7 @@
 
 The project uses a **Random Forest classification algorithm** to predict possible livestock diseases based on animal information and symptoms.
 
-### 🔄 Prediction Flow
+### Prediction Flow
 
 **Animal Details → Symptoms → Data Processing → Random Forest Model → Disease Prediction**
 
@@ -48,23 +48,23 @@ The trained model achieved **91% precision** during evaluation.
 
 ## 📸 Project Showcase
 
-### 🏠 Home Page
+### Home Page
 
 ![Livestock Disease Prediction Homepage](screenshots/homepage.png)
 
-### 📝 Disease Prediction
+### Disease Prediction
 
 ![Livestock Disease Prediction Form](screenshots/prediction.png)
 
-### 🔍 Prediction Result
+### Prediction Result
 
 ![Livestock Disease Prediction Result](screenshots/result.png)
 
-### 📋 Diagnosis History
+### Diagnosis History
 
 ![Livestock Diagnosis History](screenshots/history.png)
 
-### 📝 Power BI Report
+### Power BI Report
 
 ![Livestock Disease report](screenshots/report.png)
 ---
@@ -95,7 +95,7 @@ Disease-Prediction-in-Livestock/
 │
 └── ...
 ```
-## ⚙️ How It Work flow
+## ⚙️ Work flow
 
 • **Enter Details** - Provide the required animal information. 
 

@@ -1,4 +1,5 @@
 Flask
+Flask-SQLAlchemy
 numpy
 pandas
 scikit-learn

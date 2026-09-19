@@ -72,6 +72,8 @@ The trained model achieved **91% precision** during evaluation.
 ## 🌐 Live Demo
 
 👉 [View Disease-Prediction Live](https://disease-prediction-in-livestock-1.onrender.com)
+
+Explore Disease-prediction live. 📊
  
 ---
 

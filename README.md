@@ -95,26 +95,21 @@ Disease-Prediction-in-Livestock/
 │
 └── ...
 ```
-## ⚙️ How It Works
+## ⚙️ How It Work flow
 
-**01 — Enter Details**
-Provide the required animal information.
+• **Enter Details** - Provide the required animal information. 
 
-**02 — Select Symptoms**
-Choose the symptoms observed in the animal.
+• **Select Symptoms** - Choose the symptoms observed in the animal.
 
-**03 — Generate Prediction**
-The trained Random Forest model processes the given information.
+• **Generate Prediction** - The trained Random Forest model processes the given information.
 
-**04 — View Result**
-The application displays the predicted disease.
+• **View Result** - The application displays the predicted disease.
 
-**05 — Check History**
-Previous diagnosis records can be viewed through the history section.
+• **Check History** - Previous diagnosis records can be viewed through the history section.
 
 ## 📚 What I Learned
 
-Learned to preprocess health-related data and train a **Random Forest model** using Scikit-learn and built **Flask routes and REST APIs** to connect the trained model with the web application.Worked with **Pandas and NumPy** to handle inputs and build the complete **prediction workflow**.
+Learned to preprocess health-related data and trained a **Random Forest model** using Scikit-learn and built **Flask routes and REST APIs** to connect the trained model with the web application. Worked with **Pandas and NumPy** to handle inputs and build the complete **prediction workflow**.
 
 ### 👩‍💻 Developed By
 

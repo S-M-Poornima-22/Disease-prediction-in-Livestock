@@ -20,17 +20,17 @@
 
 ## 🧰 Built With
 
-**Python** - Used for data processing, machine learning, and application development.
+• **Python** - Used for data processing, machine learning, and application development.
 
-**Flask** - Used to build the web application and connect the trained model with the interface.
+• **Flask** - Used to build the web application and connect the trained model with the interface.
 
-**Pandas** - Used for loading, organizing, and processing the dataset.
+• **Pandas** - Used for loading, organizing, and processing the dataset.
 
-**NumPy** - Used for numerical operations and data preparation.
+• **NumPy** - Used for numerical operations and data preparation.
 
-**Scikit-learn** - Used to train and evaluate the Random Forest classification model.
+• **Scikit-learn** - Used to train and evaluate the Random Forest classification model.
 
-**HTML & CSS** - Used to build and style the web interface.
+• **HTML & CSS** - Used to build and style the web interface.
 
 ---
 

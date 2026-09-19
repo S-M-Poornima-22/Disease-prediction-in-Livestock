@@ -69,6 +69,12 @@ The trained model achieved **91% precision** during evaluation.
 ![Livestock Disease report](screenshots/report.png)
 ---
 
+## 🌐 Live Demo
+
+👉 [View Disease-Prediction Live](https://disease-prediction-in-livestock-1.onrender.com)
+ 
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -114,3 +120,4 @@ Learned to preprocess health-related data and trained a **Random Forest model** 
 ### 👩‍💻 Developed By
 
 **Poornima**
+
